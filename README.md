@@ -8,7 +8,7 @@ utility methods for stellar
 Then...
 
 ```
-const utility = require('stellar_utility');
+const utility = require('stellar-utility');
 
 let createAccountData={
             publicKey,
