@@ -75,6 +75,28 @@ let tokenValueData={
 const tokenValue=utility.tokenValue(tokenValueData);
 
 
+also try :
+
+const balanceData = {
+    publicKey: 'GDQAPLVN3LMIMRKRNUD2XWZWNXWYQMV3DK2YIPIGJGN3TFQ7KHJBRNOA',
+    stellarIp: 'https://horizon-testnet.stellar.org'
+}
+const getBal = (data) => {
+    return new Promise(async function (resolve, reject) {
+        try {
+            console.log(data)
+            resolve(await utility.getBalance(data));
+
+        } catch (e) {
+            reject(e)
+        }
+    });
+}
+
+getBal(balanceData).then(async function (value) {
+    console.log(value)
+})
+
 ```
 ## options 
 
